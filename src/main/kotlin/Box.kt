@@ -3,9 +3,11 @@ class Box {
      val length: Int = 1
      val breadth: Int = 2
     val area: Int
-    get() = length * breadth
+    get() = length * breadth // visibility is same as the property
 
     var boxName: String = ""
+
+//        visibility can be specified
     set(value) {
         if(value.length < 3){
             println("name must be at least 3 chars")
