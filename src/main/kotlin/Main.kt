@@ -1,7 +1,5 @@
 fun main(){
-    val coffee1 = BaseCoffee(10)
-    coffee1.makeCoffee()
-    val coffee2 = PremiumCoffee(20)
-    coffee2.makePremiumCoffee()
-    coffee2.makeCoffee()
+    val subscription = PremiumSubscription("animes", 100)
+    println(subscription.description())
+    println(subscription.greet())
 }
