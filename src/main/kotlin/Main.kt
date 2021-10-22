@@ -1,5 +1,4 @@
 fun main(){
-    val app = MyApp()
     val downloader = Downloader()
 
 //    object : IDownloadListener => creating anonymous class and inheriting the interface
