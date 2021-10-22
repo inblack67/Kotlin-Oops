@@ -1,19 +1,17 @@
-fun main(){
-    val downloader = Downloader()
-
-//    object : IDownloadListener => creating anonymous class and inheriting the interface
-    downloader.downloadListener = object : IDownloadListener {
-        override fun onDownloadStarted() {
-            println("download started")
-        }
-
-        override fun downloadInProgress(progress: Int) {
-            println("$progress% downloaded")
-        }
-
-        override fun fileDownloaded(file: String) {
-            println("downloaded $file")
-        }
+class FileDownloader: IDownloader {
+    override fun download(): String {
+       return "downloading"
     }
-    downloader.downloadFile("hello.txt")
+}
+
+class FilePlayer: IPlayer {
+    override fun play(): String {
+        return "playing"
+    }
+}
+
+fun main(){
+    val mediaFile = MediaFile(FileDownloader(), FilePlayer())
+    println(mediaFile.download())
+    println(mediaFile.play())
 }
